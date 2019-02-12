@@ -47,7 +47,8 @@ class RedactorModule extends \yii\base\Module
     {
         $path = Yii::getAlias($this->uploadDir);
         if (!file_exists($path)) {
-            throw new InvalidConfigException('Invalid config $uploadDir');
+            FileHelper::createDirectory($path);
+//            throw new InvalidConfigException('Invalid config $uploadDir');
         }
         if (FileHelper::createDirectory($path . DIRECTORY_SEPARATOR . $this->getOwnerPath(), 0777)) {
             return $path . DIRECTORY_SEPARATOR . $this->getOwnerPath();

@@ -14,7 +14,7 @@ namespace wodrow\yii2wwredactor\widgets;
  */
 class RedactorAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/yiidoc/yii2-redactor/assets';
+    public $sourcePath = '@vendor/wodrow/yii2-ww-redactor/src/assets';
     public $depends = ['yii\web\JqueryAsset'];
 
     public function init()
